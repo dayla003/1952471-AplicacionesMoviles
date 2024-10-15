@@ -1,7 +1,0 @@
-{
-  "name": "appGrid",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
