@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Aplicación Pomodoro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="contenedor" [ngClass]="{'vista-pomodoro': esPomodoro, 'vista-descanso': !esPomodoro}">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ esPomodoro ? 'POMODORO' : 'BREAK' }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ esPomodoro ? '25:00' : '5:00' }}</h1>
+        <ion-button expand="block" (click)="alternarVista()">
+          {{ esPomodoro ? 'Ir a Break' : 'Ir a Pomodoro' }}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
